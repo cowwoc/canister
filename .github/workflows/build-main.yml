@@ -1,0 +1,22 @@
+# Need separate workflows for "main" and PR builds because README.md contains a badge showing the status of
+# the main branch.
+name: Build
+on:
+  push:
+    branches: [ main ]
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build
+    uses: ./.github/workflows/reusable-build.yml
+    secrets: inherit
+    permissions:
+      contents: read
+      actions: read
+      checks: write
+    with:
+      COMMIT_ID: ${{ github.ref }}
+      FOR_RELEASE: false

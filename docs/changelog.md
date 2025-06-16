@@ -4,11 +4,13 @@ See https://github.com/cowwoc/docker/commits/main for a full list.
 
 ## Version 0.10 - ?
 
-* Renamed product to `anchor4j`.
+* Migrated artifactId from `com.github.cowwoc.docker` to `io.github.cowwoc.canister`.
 * Dual-licensed source-code under ModernJDK 1.0 and a commercial license.
-* Architectural change: integrate command-line interface instead of using the poorly documented REST and gRPC
-  APIs.
-  
+* Architectural changes
+  * Split the codebase into separate API and implementation modules. This separation simplifies the creation
+    of alternative implementations and makes it easier to inject test-specific mocks.
+  * Used command-line interface instead of the poorly documented REST and gRPC APIs.
+
 ## Version 0.9 - 2025/02/19
 
 * DockerfileParser: Added support for COPY/ADD --options.

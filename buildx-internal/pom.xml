@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>io.github.cowwoc.canister</groupId>
+		<artifactId>canister</artifactId>
+		<version>0.10-SNAPSHOT</version>
+	</parent>
+	<artifactId>canister-buildx-internal</artifactId>
+	<name>canister-buildx-internal</name>
+	<description>Code that is shared between internal implementations of canister-buildx-api</description>
+
+	<properties>
+		<project.root.basedir>${project.parent.basedir}</project.root.basedir>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>canister-buildx-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>canister-core-internal</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.github.cowwoc.requirements</groupId>
+			<artifactId>requirements-java</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.github.cowwoc.requirements</groupId>
+			<artifactId>requirements-jackson</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+		</dependency>
+	</dependencies>
+</project>
